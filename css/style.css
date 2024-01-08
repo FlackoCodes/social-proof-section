@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    background-image: url('/images/bg-pattern-top-desktop.svg'),
+    url('/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+
+h1{
+    font-size: 2rem;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.intro p{
+    color: hsl(300, 12%, 43%);
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.header p{
+   color: hsl(333, 80%, 67%);
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.ratings{
+    color: hsl(303, 71%, 18%);
+    border-radius: 10px;
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.card-1{
+    margin-right: 60px;
+}
+
+.card-2{
+    margin-left: 40px;
+}
+
+.card-3{
+    margin-left: 80px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+
+.cards{
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.second{
+        position: relative;
+        top: 20px;
+}
+
+.third{
+    position: relative;
+    top: 40px;
+}
+
+.header{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+
+@media screen and (max-width: 450px) {
+        .container {
+            max-width: 70%; 
+            margin: 0 auto; 
+            text-align: center;
+        }
+
+        .flex-container{
+            display: grid;
+            place-content: center;
+        }
+      
+         .ratings {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-wrap: nowrap;
+        } 
+
+        .ratings h2{
+            text-align: center;
+        }
+        .card-1, .card-2, .card-3{
+            position: static;
+            margin: 10px 0;
+        }
+
+     
+        .grid-container {
+            grid-template-columns: 1fr; 
+        }
+
+        .second, .third{
+            position: static;
+        }
+
+        .intro p{
+            margin-bottom: 20px;
+        }
+
+        .header h2{
+            text-wrap: nowrap;
+        }
+
+        .header p{
+            text-align: left;
+        }
+}
+    
